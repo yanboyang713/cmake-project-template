@@ -10,9 +10,16 @@ set(DIVISIBLE_INSTALL_BIN_DIR ${PROJECT_SOURCE_DIR}/bin)
 set(DIVISIBLE_INSTALL_LIB_DIR ${PROJECT_SOURCE_DIR}/lib)
 
 set(DIVISION_HEADERS_DIR ${PROJECT_SOURCE_DIR}/src/division)
+set(YBY_HEADERS_DIR ${PROJECT_SOURCE_DIR}/src/yby)
+set(RANDOM_HEADERS_DIR ${PROJECT_SOURCE_DIR}/src/yby/random)
 
 include_directories(${DIVISIBLE_INSTALL_INCLUDE_DIR})
+
 include_directories(${DIVISION_HEADERS_DIR})
+include_directories(${YBY_HEADERS_DIR})
+include_directories(${RANDOM_HEADERS_DIR})
+
+
 
 add_subdirectory(src)
 add_subdirectory(test)

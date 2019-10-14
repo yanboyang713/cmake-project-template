@@ -1,4 +1,5 @@
 #include <division.h>
+#include <yby.h>
 
 static const char *const HEADER = "\nDivider © 2018 Monkey Claps Inc.\n\n";
 static const char *const USAGE = "Usage:\n\tdivider <numerator> <denominator>\n\nDescription:\n\tComputes the result of a fractional division,\n\tand reports both the result and the remainder.\n";
@@ -17,6 +18,7 @@ int main(int argc, const char *argv[]) {
   f.numerator = atoll(argv[1]);
   f.denominator = atoll(argv[2]);
 
+
   Division d = Division(f);
   try {
     DivisionResult r = d.divide();
@@ -26,5 +28,9 @@ int main(int argc, const char *argv[]) {
   } catch (DivisionByZero) {
     std::cout << "Can not divide by zero, Homer. Sober up!\n";
   }
+
+
+  birthday b(1,2,3);
+  cout << b.getMonth() << endl;
   return 0;
 }
